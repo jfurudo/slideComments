@@ -1,0 +1,11 @@
+extend layout
+
+block content
+  script(src='/javascripts/jquery-ui-1.10.4.min.js')
+  script(src='javascripts/slideComments.js')
+  link(rel='stylesheet', href='stylesheets/slidecomments.css')
+
+  div.container.sm-col-offset-2
+    div.row
+      div#slide(style="width: 960px; height: 569px")
+        iframe(src="#{iframeUri.uri}", frameborder="0", width="960", height="569", allowfullscreen="true", mozallowfullscreen="true", webkitallowfullscreen="true")

@@ -1,0 +1,71 @@
+body {
+    background-color: black;
+}
+input {
+    color: black;
+}
+p.comment {
+    padding: 3px;
+    right: 0px;
+    position: absolute;
+    transition: right 4s linear 0s;
+    font-size: xx-large;
+    &.mine {
+        border: solid;
+        border-color: yellow;
+        border-width: 1px;        
+    }
+}
+body.hideComments p.comment {
+     /* color: transparent; */
+    display: none;
+}
+div.console {
+    position: fixed;
+    bottom: 0px;
+    background-color: silver;
+}
+div#loggerContainer {
+    position: fixed;
+    right: 0px;
+    bottom: 100px;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    #loggerHeader {
+        height: 10%;
+        background-color: silver;
+        padding: 3px;
+        p {font-size: large}
+    }
+    #loggerBody {
+        height: 90%;
+        #logger {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            color: black;
+        }
+    }
+    &.minimize {
+        height: 30px;
+        #loggerHeader {
+            height: 97%;
+        }
+        #loggerBody {
+            display: none;
+        }
+    }
+}
+
+.glyphicon {
+    right: 0px;
+    margin-right: 5px;
+    &:hover {
+        background-color: white;
+    }
+}
+

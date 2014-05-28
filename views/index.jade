@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Welcome to #{title}
+
+  script(src='javascripts/index.js')
+
+  form(method="POST", action="room")
+    div.form-group
+      input#iframeUri(class="form-control", type="text", placeholder="URI to Google Slides.", name="iframe_uri")
+      input(class="btn btn-default", type="submit", value="Submit")
+
+  p Samples
+    ul
+      li
+        a(href="sample/template.html") io-2012-slides
+      li
+        a(href="sample") Google Slides
+
+  p Current Presentations
+    ul#roomList
+      - for (var i = 0; i < presentations.length; i++)
+        li
+          a(href="room?id=#{i}") Room-#{i + 1}
