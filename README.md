@@ -1,8 +1,8 @@
 #Slide Comments
 
-To lunch the server following this.
+To launch the server following this.
 
-`$ npm install`
+`$ npm install`  
 `$ sails lift`
   or
 `$ node app.js`
